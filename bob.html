@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div id="soup"></div>
+
+<script>
+    // Model
+     let play = document.getElementById("soup")
+     let mopo;
+
+    // View
+    show();
+    function show(){
+        play.innerHTML = `
+    
+        <div class="title">
+            <h1> 
+                Oppgaver
+                <span class="caret-down"></span>
+            </h1>
+            <span class="toggle"></span>
+        </div>
+
+    <section class="panels view-mode">
+
+        <div class="panel task-list-panel open-panel">
+            <div class="toolbar">
+            </div>
+
+            <div class="task-list">
+                <ul>
+                    <li class="placeholder"><span></span></li>
+                    <li class="placeholder"><span></span></li>
+                    <li class="placeholder"><span></span></li>
+                    <li class="placeholder"><span></span></li>
+                    <li class="placeholder"><span></span></li>
+                    <li class="placeholder"><span></span></li>
+                    <li class="placeholder"><span></span></li>
+                    <li class="placeholder"><span></span></li>
+                    <li class="placeholder"><span></span></li>
+                    <li class="placeholder"><span></span></li>
+                    <li class="placeholder"><span></span></li>
+                    <li class="placeholder"><span></span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="panel task-edit-panel hide">
+            <div class="toolbar">
+                <div class="user-info">
+                    Morten Myhre
+                    <span class="circle"></span>
+                </div>
+
+                <div class="task-options">
+                    <span class="due-date">Domme dag</span>
+
+                </div>
+
+                <button class="btn-add">Legg til</button>
+            </div>
+
+    <div class="content">
+        <form>
+            <fieldset>
+                <input type="text" name="title" placeholder="New Task">
+
+                <div class="description">
+                    <textarea 
+                    name="description" 
+                    placeholder="Description">
+                    </textarea>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+            <div class="comment">
+                <form>
+                    <fieldset>
+                        <textarea name="comment">Kommentar felt.</textarea>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+    </section>
+        `
+    }
+
+    // Controller
+
+</script>
+
+</body>
+</html>
